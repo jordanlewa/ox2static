@@ -2,6 +2,7 @@ backend:
   name: github
   repo: jordanlewa/ox2static
   branch: main
+  auth_scope: repo
   auth_endpoint: https://github.com/login/oauth/authorize
   login:
     client_id: Ov23li2lNV2JWxJNicYF
