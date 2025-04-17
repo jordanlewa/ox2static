@@ -2,14 +2,16 @@ backend:
   name: github
   repo: jordanlewa/ox2static
   branch: main
-
-auth:
-    name: github
+  auth_endpoint: https://github.com/login/oauth/authorize
+  login:
     client_id: Ov23li2lNV2JWxJNicYF
     client_secret: f697c0d3055aa76f3f10465cea8adba38af58b56
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
+
+auth:
+    redirect_uri: https://ox2static.vercel.app/admin/callback
 
 collections:
   - name: "posts"
