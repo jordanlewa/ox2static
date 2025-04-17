@@ -1,3 +1,16 @@
 backend:
   name: git-gateway
   branch: main
+
+media_folder: "uploads" # Where uploaded images will be stored in the repo
+public_folder: "/uploads" # How those images are accessed publicly
+
+collections:
+  - name: "posts" # Name of the collection in the repo
+    label: "Posts" # What it shows in the CMS
+    folder: "posts" # Folder where the markdown files are saved
+    create: true # Allow users to create new entries
+    slug: "{{slug}}" # How filenames are generated
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
