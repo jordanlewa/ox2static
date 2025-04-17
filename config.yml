@@ -1,31 +1,22 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2822
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;\red24\green26\blue30;}
-{\*\expandedcolortbl;;\cssrgb\c12157\c13725\c15686;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+backend:
+  name: github
+  repo: jordanlewa/ox2static
+  branch: main
 
-\f0\fs24 \cf0 backend:\
-  name: github\
-  repo: jordanlewa/ox2static\
-  branch: main\
-\
-auth:\
-    name: github\
-    client_id: Ov23li2lNV2JWxJNicYF\
-    client_secret: \cf2 \expnd0\expndtw0\kerning0
-f697c0d3055aa76f3f10465cea8adba38af58b56\cf0 \kerning1\expnd0\expndtw0 \
-\
-media_folder: "public/uploads"\
-public_folder: "/uploads"\
-\
-collections:\
-  - name: "posts"\
-    label: "Blog Posts"\
-    folder: "content/posts"\
-    create: true\
-    slug: "\{\{slug\}\}"\
-    fields:\
-      - \{ label: "Title", name: "title", widget: "string" \}\
-      - \{ label: "Body", name: "body", widget: "markdown" \}\
-}
+auth:
+    name: github
+    client_id: Ov23li2lNV2JWxJNicYF
+    client_secret: f697c0d3055aa76f3f10465cea8adba38af58b56
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "posts"
+    label: "Blog Posts"
+    folder: "content/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
