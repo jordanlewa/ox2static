@@ -3,6 +3,7 @@ backend:
   repo: jordanlewa/ox2static
   branch: main
   auth_scope: repo
+  auth_endpoint: api/auth
   base_url: https://ox2static.vercel.app/ # we'll cover this next
 
 
