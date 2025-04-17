@@ -1,6 +1,10 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: jordanlewa/ox2static
   branch: main
+  auth_scope: repo
+  base_url: https://ox2static.vercel.app/ # we'll cover this next
+
 
 media_folder: "uploads" # Where uploaded images will be stored in the repo
 public_folder: "/uploads" # How those images are accessed publicly
